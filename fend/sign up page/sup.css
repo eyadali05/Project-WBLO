@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-image: url(bg11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+header {
+    position: relative;
+    margin-left: 100px;
+}
+
+.logo {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #00ffae;
+    cursor: pointer;
+}
+
+.sign-up-form {
+    width: 300px;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+        background: #fff;
+        padding: 20px;
+        margin: 8% auto 0;
+        text-align: center;
+    border-radius: 50px;
+}
+
+.sign-up-now-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.terms-and-services {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sign-up-form h1 {
+    margin-bottom: 30px;
+}
+
+.input-box {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+    border: 1px solid #999;
+    outline: none;
+}
+
+button {
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sign-btn {
+    background-color: yellow;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+
+}
+
+.facebook-sign-btn {
+    background-color: DodgerBlue;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.or {
+    background: #fff;
+    width: 30px;
+    margin: -19px auto 10px; 
+}
+
+.user-icon {
+    width: 70px;
+    
+}

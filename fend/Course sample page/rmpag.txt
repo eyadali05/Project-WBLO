@@ -1,0 +1,22 @@
+remaining pages:
+    .Dashboard
+    .Homepage
+    .My account page
+    .Assignments page 
+    .Quizzes (page and process)
+    .Messages
+    .Announcements
+    .My books page (also mind that books can only be uploaded via an admin, course mod, course owner)
+    .My schedule page 
+
+plan: 
+    (all pages should be done within one week)
+    .make 2 pages per day (should take 8 days)
+    #also try to finish all in one week 
+
+
+lastly:
+    After finishing all the remaining pages, make sure to join all pages together as a site demo.
+    Then construct the django project with all the apps and the staticfiles.
+    And after debugging, make sure to write the documentation for your code.
+    and hit publish site. (these notes are not final, make sure to recheck them while being in the process of the django code)
