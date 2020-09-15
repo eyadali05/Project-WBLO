@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Poppins';
+    color: antiquewhite;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.logo {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 40px;
+    font-weight: 200 ;
+    color: #00ffae;
+    cursor: pointer;
+    margin-top: .3em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.logo h4 {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 40px;
+    font-weight: 200;
+    color: #00ffae;
+    cursor: pointer;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.center h1 {
+    text-align: center;
+    border-bottom: #fff 1px solid;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+input[type=email]{
+    transition: all 0.3s ease;
+    width: 90%;
+}    
+input[type=password]{
+    transition: all 0.3s ease;
+    width: 90%;
+}
+
+.form-group input{
+    background-color: #26282e;
+    border: none;
+    transition: 0.3s ease;
+}
+
+input[type=password]:focus{
+    background-color: #26282e;
+    color: #fff;
+}
+input[type=email]:focus{
+    background-color: #26282e;
+    color: #fff;
+}
+
+.pass {
+    text-decoration: none;
+    color: #fff;
+    opacity: 60%;
+    margin-left: 2em;
+    transition: all 0.3s ease;
+}
+
+.pass:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 100%;
+}
+
+.pass:visited {
+    color: #fff;
+    text-decoration: none;
+    opacity: 100%;
+}
+
+.login-btn {
+    margin-top: 1em;
+}
+
+.btn-centered {
+    text-align: center;
+}
+
+.not-a-member {
+    margin-left: 2em;
+    margin-top: 1em;
+    color: #fff;
+    opacity: 60%;
+}
+.not-a-member a{
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.not-a-member a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.not-a-member a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+@media screen and (max-width: 768px) {
+    .center {
+        width: 90%;
+    }
+}

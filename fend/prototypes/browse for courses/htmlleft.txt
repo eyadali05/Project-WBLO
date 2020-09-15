@@ -1,0 +1,51 @@
+            <div class="product">
+                <div class="product-image">
+                    <img src="img/productivity.png" alt="">
+                </div>
+                <div class="product-title">
+                    Productivity 101
+                </div>
+                <div class="product-price">
+                    $29.99
+                </div>
+                <div class="product-description">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="enroll-now">
+                    <button><a href="#">Enroll now</a></button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="img/bing.jpeg" alt="">
+                </div>
+                <div class="product-title">
+                    Your guide to stop binge eating
+                </div>
+                <div class="product-price">
+                    $29.99
+                </div>
+                <div class="product-description">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="enroll-now">
+                    <button><a href="#">Enroll now</a></button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="img/anger.jpeg" alt="">
+                </div>
+                <div class="product-title">
+                    How to control your anger 
+                </div>
+                <div class="product-price">
+                    $29.99
+                </div>
+                <div class="product-description">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="enroll-now">
+                    <button><a href="#">Enroll now</a></button>
+                </div>
+            </div>

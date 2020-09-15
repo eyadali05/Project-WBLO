@@ -1,0 +1,446 @@
+*,*::before, *::after {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: Lato, sans-serif;
+}
+
+body {
+    background-color: #222831;
+    color: antiquewhite;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #353941;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f30a49;
+}
+
+header {
+  background-color:#121212;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-around; /*Changed from 'center' to 'space-around*/
+  align-items:center;
+  z-index:1;
+  font-family: 'Poppins', sans-serif;
+  height: 5rem; /*if removed sidebar will be not full height in mobile mode*/
+  /*Changes added*/
+  min-height: 8vh;
+}
+
+header nav ul {
+  list-style-type:none;
+  justify-content: space-around;
+  display:flex;
+  color:#fff;
+}
+
+header nav ul li {
+  list-style-type:none;
+  display:flex;
+  padding:1rem;
+  color:#fff;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    transition: all 0.3s ease 0s 
+}
+
+header nav ul li a:hover {
+    color: rgb(170, 170, 170);
+}
+
+.logo {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 30px;
+    font-weight: 200 ;
+    color: #00ffae;
+    cursor: pointer;
+}
+
+
+
+
+main {
+  margin:5rem 0 0 12rem;
+  padding:2rem;
+}
+
+main h1 {
+  margin-bottom:1rem;
+}
+
+main p {
+  font-size:1.5rem;
+  line-height:1.61;
+  margin-bottom:2rem;
+}
+
+.nav-btn {
+    color: antiquewhite;
+    padding: 9px 25px;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s 
+}
+
+.nav-btn:hover {
+    background: crimson;
+    box-shadow: 0 0 5px crimson,
+                0 0 25px crimson,
+                0 0 50px crimson,
+                0 0 200px crimson;
+}
+
+.nav-btn a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.logo h4{
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 30px;
+    font-weight: 200;
+    color: #00ffae;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;/*Only remove it when testing*/
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: antiquewhite;
+    margin: 5px;
+    transition: transform 0.3s ease-in;
+
+}
+
+.sidebar {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background-color: #353941;
+    width: 5rem;
+    line-height: 60px;
+    padding-left: 30px;
+    height: 100%;
+    position: fixed;
+    /*Changes Start*/
+    /*Changes End*/
+
+}
+
+.sidebar a{
+    text-decoration: none;
+    cursor: pointer;
+    color: antiquewhite;
+    transition: all 0.3s ease 0s 
+}
+
+.sidebar a:hover{
+    color: rgb(170, 170, 170);
+}
+
+.sidebar li{
+    display: block;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    .sidebar {
+        margin-bottom: 10px;
+        width: 130px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    header nav ul {
+        position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            background-color: #e2f3f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+    }
+
+    header nav ul li a {
+        color: #333;
+    }
+
+
+    header nav ul li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            background-color: #e2f3f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        translate: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wablo | Browse for courses</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h4>Wablo</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Browse for courses</a></li>
+                <li><a href="#">My courses</a></li>
+            </ul>
+        </nav>
+        <button class="nav-btn"><a href="#">Logout</a></button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul class="sidebar-links">
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/user.png" alt="" class="sidebar-icon">
+                        <span class="link-text">My Account</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/assign.png" alt="" class="sidebar-icon">
+                        <span class="link-text">Assignments</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/quiz.png" alt="" class="sidebar-icon">
+                        <span class="link-text">Quizzes</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/mail (1).png" alt="" class="sidebar-icon">
+                        <span class="link-text">Messages</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/megaphone.png" alt="" class="sidebar-icon">
+                        <span class="link-text">Announcements</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/book.png" alt="" class="sidebar-icon">
+                        <span class="link-text">My Books</span>
+                    </a>
+                </li>                
+                <li class="sidebar-item">
+                    <a href="#">
+                        <img src="img/calendar.png" alt="" class="sidebar-icon">
+                        <span class="link-text">Upcoming Sessions</span>
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Lorem Ipsum</h1>
+        <p>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
+        <p>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
+        <p>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
+        <p>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
+        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+        (injected humour and the like).
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied</p>
+    </main>
+    <script src="navbar.js"></script>
+</body>
+</html>
